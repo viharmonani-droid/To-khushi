@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>For Khushi</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:italic,wght@600;700&family=Outfit:wght@100;400;900&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --aura-1: #ffffff;
+            --aura-2: #ffdde1;
+            --aura-3: #a1c4fd;
+            --accent: #ee9ca7;
+        }
+
+        /* Mobile Optimization */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background: #fff;
+            font-family: 'Outfit', sans-serif;
+            height: 100vh;
+            overflow: hidden;
+            /* Lock the body to use our custom scroller */
+            position: fixed;
+            width: 100%;
+        }
+
+        /* 1. Dynamic Liquid Background (Optimized for Mobile GPU) */
+        #canvas-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            filter: blur(50px);
+            opacity: 0.8;
+            pointer-events: none;
+        }
+
+        /* 2. Vertical Pro Scroller */
+        #viewport {
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            position: relative;
+            z-index: 2;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        section {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            scroll-snap-align: start;
+            padding: 25px;
+        }
+
+        /* Luxury Glassmorphism UI */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 40px;
+            padding: 40px 30px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.03);
+            opacity: 0;
+            transform: translateY(40px) scale(0.9);
+            transition: all 1s cubic-bezier(0.2, 1, 0.2, 1);
+        }
+
+        section.active .glass-panel {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        /* Pro Typography */
+        h1 {
+            font-weight: 900;
+            font-size: 3rem;
+            line-height: 0.9;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            color: #fff;
+            text-shadow: 0 10px 25px rgba(238, 156, 167, 0.4);
+        }
+
+        .text-body {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #444;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        /* THE ADVANCED SHAYARI (ULTRA EMOTION) */
+        .shayari-reveal {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: #222;
+            line-height: 1.3;
+            font-style: italic;
+            font-weight: 700;
+            margin: 20px 0;
+            background: linear-gradient(90deg, #222, #ee9ca7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .scroll-hint {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.65rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: #ee9ca7;
+            z-index: 10;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+                opacity: 0.4;
+            }
+
+            50% {
+                transform: translateX(-50%) translateY(-10px);
+                opacity: 1;
+            }
+        }
+
+        /* Magic Touch Sparkle */
+        .spark {
+            position: fixed;
+            width: 8px;
+            height: 8px;
+            background: #fff;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 1000;
+            box-shadow: 0 0 10px #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <canvas id="canvas-bg"></canvas>
+    <div class="scroll-hint">Swipe Up to Read ↓</div>
+
+    <div id="viewport">
+        <section class="active">
+            <div class="glass-panel">
+                <h1>Khushi</h1>
+                <p class="text-body">This afternoon felt like the world suddenly turned gray. The silence between us is
+                    heavy. You are both a friend and a sister to me—this distance feels completely wrong.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="glass-panel">
+                <h1>The Void</h1>
+                <p class="text-body">I’ve replayed every word in my head. I realized my ego was loud and my heart was
+                    quiet. I hurt a person who deserves only my highest respect. I was wrong.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="glass-panel">
+                <h1>Reality</h1>
+                <p class="text-body">You’re more than a friend; you’re family. Seeing you stop talking to me is the
+                    hardest reality check I’ve ever had. I value you more than my pride.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="glass-panel">
+                <h1>The Reset</h1>
+                <p class="text-body">I can't undo this afternoon, but I can promise to protect our bond better. No more
+                    sharp words, no more tension. Let's start fresh tonight.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="glass-panel" style="border: 1.5px solid #fff;">
+                <div class="shayari-reveal">
+                    "Khamoshi teri ab mujhse sahi nahi jaati,<br>
+                    Ye doori dil ko ek pal sukoon nahi dilati...<br><br>
+                    Galti meri thi, ehsaas bhi mujhe hai,<br>
+                    Par tere bin ye 'Khushi' ab nazar nahi aati."
+                </div>
+                <p style="margin-top: 30px; font-weight: 900; letter-spacing: 4px; color: #ee9ca7;">I AM TRULY SORRY.
+                    LET'S FIX THIS?</p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // 1. Mobile Touch Sparkles
+        document.addEventListener('touchstart', (e) => {
+            const touch = e.touches[0];
+            createSpark(touch.clientX, touch.clientY);
+        });
+
+        function createSpark(x, y) {
+            const spark = document.createElement('div');
+            spark.className = 'spark';
+            spark.style.left = x + 'px';
+            spark.style.top = y + 'px';
+            document.body.appendChild(spark);
+
+            const destX = (Math.random() - 0.5) * 100;
+            const destY = (Math.random() - 0.5) * 100;
+
+            spark.animate([
+                { transform: 'translate(0,0) scale(1)', opacity: 1 },
+                { transform: `translate(${destX}px, ${destY}px) scale(0)`, opacity: 0 }
+            ], { duration: 800, easing: 'ease-out' });
+
+            setTimeout(() => spark.remove(), 800);
+        }
+
+        // 2. Mobile Scroller Observer
+        const sections = document.querySelectorAll('section');
+        const viewport = document.getElementById('viewport');
+
+        viewport.addEventListener('scroll', () => {
+            sections.forEach(s => {
+                const rect = s.getBoundingClientRect();
+                if (rect.top >= -window.innerHeight / 2 && rect.top <= window.innerHeight / 2) {
+                    s.classList.add('active');
+                } else {
+                    s.classList.remove('active');
+                }
+            });
+        });
+
+        // 3. Optimized Background
+        const canvas = document.getElementById('canvas-bg');
+        const ctx = canvas.getContext('2d');
+        let blobs = [];
+
+        function resize() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        class Blob {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.radius = Math.random() * 150 + 100;
+                this.color = ['#ffdde1', '#ee9ca7', '#a1c4fd'][Math.floor(Math.random() * 3)];
+                this.vx = (Math.random() - 0.5) * 1;
+                this.vy = (Math.random() - 0.5) * 1;
+            }
+            update() {
+                this.x += this.vx; this.y += this.vy;
+                if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+            }
+        }
+
+        function init() {
+            resize();
+            for (let i = 0; i < 8; i++) blobs.push(new Blob());
+            animate();
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            blobs.forEach(b => { b.update(); b.draw(); });
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener('resize', resize);
+        init();
+    </script>
+</body>
+
+</html>
