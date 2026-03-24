@@ -13,7 +13,7 @@
             --accent: #ee9ca7;
         }
 
-        /* Full Screen Mobile Optimization */
+        /* Essential Mobile Reset */
         * { 
             margin: 0; 
             padding: 0; 
@@ -30,7 +30,7 @@
             position: fixed;
         }
 
-        /* 1. Ultra-Level Liquid Background */
+        /* 1. Ultra-Fluid Canvas (Pro Graphics) */
         #canvas-bg {
             position: fixed;
             top: 0;
@@ -39,10 +39,10 @@
             height: 100%;
             z-index: 1;
             filter: blur(40px);
-            opacity: 0.9;
+            opacity: 1;
         }
 
-        /* 2. Full-Screen Scroller */
+        /* 2. Full-Screen Swipe Engine */
         #viewport {
             height: 100dvh;
             width: 100vw;
@@ -60,29 +60,29 @@
             justify-content: center;
             align-items: center;
             scroll-snap-align: start;
-            padding: 20px; /* Minimal padding to use more screen */
+            padding: 15px;
         }
 
-        /* 3. PRO UI - Huge Glass Card */
+        /* 3. The "Elite" Glass Card - Uses Full Screen Height */
         .glass-panel {
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(40px);
-            -webkit-backdrop-filter: blur(40px);
-            border: 2px solid rgba(255, 255, 255, 0.6);
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(50px);
+            -webkit-backdrop-filter: blur(50px);
+            border: 2px solid rgba(255, 255, 255, 0.7);
             border-radius: 40px;
-            padding: 60px 25px; /* Focused on vertical space */
-            width: 95%;
-            height: 85%; /* Uses 85% of the mobile screen height */
+            padding: 40px 20px;
+            width: 100%;
+            height: 90%; /* Forces the card to use almost the entire screen */
             display: flex;
             flex-direction: column;
             justify-content: center;
             text-align: center;
-            box-shadow: 0 40px 80px rgba(0,0,0,0.05);
+            box-shadow: 0 50px 100px rgba(238, 156, 167, 0.2);
             
-            /* High-End Transition */
+            /* High-End Entry Animation */
             opacity: 0;
-            transform: scale(0.8) translateY(100px);
-            transition: all 1s cubic-bezier(0.15, 0.85, 0.35, 1);
+            transform: scale(0.9) translateY(40px);
+            transition: all 0.8s cubic-bezier(0.15, 0.85, 0.35, 1);
         }
 
         section.active .glass-panel {
@@ -90,25 +90,25 @@
             transform: scale(1) translateY(0);
         }
 
-        /* 4. MASSIVE TYPOGRAPHY (Pro Level) */
+        /* 4. Massive Kinetic Typography */
         h1 {
             font-family: 'Syncopate', sans-serif;
             font-weight: 700;
-            font-size: clamp(3.5rem, 15vw, 6rem); /* HUGE TEXT */
+            font-size: clamp(3.2rem, 14vw, 5rem); /* Extremely bold and large */
             line-height: 0.8;
             text-transform: uppercase;
-            margin-bottom: 40px;
+            margin-bottom: 35px;
             color: #fff;
             letter-spacing: -3px;
-            text-shadow: 0 10px 40px rgba(238, 156, 167, 0.5);
+            text-shadow: 0 10px 40px rgba(238, 156, 167, 0.6);
         }
 
         .text-body {
-            font-size: clamp(1.4rem, 6vw, 2rem); /* Large readable body */
+            font-size: clamp(1.4rem, 6vw, 1.8rem); /* Large, easy-to-read text */
             line-height: 1.4;
-            color: #222;
+            color: #1a1a1a;
             font-weight: 400;
-            padding: 0 10px;
+            padding: 0 5px;
         }
 
         /* THE SHAYARI (ULTRA-BOLD CENTERPIECE) */
@@ -116,26 +116,26 @@
             font-family: 'Cormorant Garamond', serif;
             font-size: clamp(2rem, 8vw, 3rem);
             color: #000;
-            line-height: 1.2;
+            line-height: 1.25;
             font-style: italic;
             font-weight: 700;
-            margin: 30px 0;
+            margin: 25px 0;
             background: linear-gradient(135deg, #000, #ee9ca7);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        /* Scroll Hint */
         .hint {
             position: fixed;
-            bottom: 30px;
+            bottom: 25px;
             left: 50%;
             transform: translateX(-50%);
-            font-size: 0.8rem;
-            letter-spacing: 5px;
+            font-size: 0.75rem;
+            letter-spacing: 6px;
             color: #ee9ca7;
             z-index: 10;
             text-transform: uppercase;
+            font-weight: 900;
             animation: bounce 2s infinite;
         }
 
@@ -144,11 +144,11 @@
             50% { transform: translateX(-50%) translateY(-10px); opacity: 1; }
         }
 
-        /* Touch Graphics */
-        .glow {
+        /* Touch Interaction Particles */
+        .glow-particle {
             position: fixed;
-            width: 15px;
-            height: 15px;
+            width: 12px;
+            height: 12px;
             background: #fff;
             border-radius: 50%;
             pointer-events: none;
@@ -166,28 +166,28 @@
         <section class="active">
             <div class="glass-panel">
                 <h1>Khushi</h1>
-                <p class="text-body">This afternoon felt like the world turned gray. The silence is heavy. You are a friend and a sister—this gap feels wrong.</p>
+                <p class="text-body">This afternoon, the world turned gray. The silence between us is heavy. You are both friend and family—this distance feels wrong.</p>
             </div>
         </section>
 
         <section>
             <div class="glass-panel">
-                <h1>Fault</h1>
-                <p class="text-body">I realized my ego was loud and my heart was quiet. I hurt a person who deserves only my respect. I was wrong.</p>
+                <h1>Ego</h1>
+                <p class="text-body">I realized my ego was loud and my heart was quiet. I hurt a person who deserves only my respect. I was truly wrong.</p>
             </div>
         </section>
 
         <section>
             <div class="glass-panel">
                 <h1>Bond</h1>
-                <p class="text-body">You are family. My pride means nothing compared to our bond. I am deeply sorry for letting stupidity come between us.</p>
+                <p class="text-body">You are like family to me. My pride means nothing compared to our bond. I am deeply sorry for today's mistakes.</p>
             </div>
         </section>
 
         <section>
             <div class="glass-panel">
                 <h1>Reset</h1>
-                <p class="text-body">I promise to protect this bond better. No more tension. Let’s start fresh tonight. Please?</p>
+                <p class="text-body">I promise to be better. No more tension. Let’s leave the afternoon behind and start fresh tonight. Please?</p>
             </div>
         </section>
 
@@ -205,28 +205,28 @@
     </div>
 
     <script>
-        // 1. Mobile Touch Feedback
+        // 1. Interactive Mobile Touch Logic
         document.addEventListener('touchstart', (e) => {
             const touch = e.touches[0];
-            createGlow(touch.clientX, touch.clientY);
+            createParticle(touch.clientX, touch.clientY);
         });
 
-        function createGlow(x, y) {
+        function createParticle(x, y) {
             const el = document.createElement('div');
-            el.className = 'glow';
+            el.className = 'glow-particle';
             el.style.left = x + 'px';
             el.style.top = y + 'px';
             document.body.appendChild(el);
 
             el.animate([
                 { transform: 'translate(0,0) scale(1)', opacity: 1 },
-                { transform: 'translate(0,-50px) scale(0)', opacity: 0 }
+                { transform: 'translate(0,-100px) scale(0)', opacity: 0 }
             ], { duration: 1000, easing: 'ease-out' });
 
             setTimeout(() => el.remove(), 1000);
         }
 
-        // 2. Pro Scroll Snap Observer
+        // 2. Active Slide Observer
         const sections = document.querySelectorAll('section');
         const viewport = document.getElementById('viewport');
         
@@ -241,7 +241,7 @@
             });
         });
 
-        // 3. Ultra-Smooth Aura Background
+        // 3. Pro Liquid Background Engine
         const canvas = document.getElementById('canvas-bg');
         const ctx = canvas.getContext('2d');
         let particles = [];
@@ -257,8 +257,8 @@
                 this.y = Math.random() * canvas.height;
                 this.radius = Math.random() * 250 + 200;
                 this.color = ['#ffdde1', '#ee9ca7', '#a1c4fd'][Math.floor(Math.random() * 3)];
-                this.vx = (Math.random() - 0.5) * 2;
-                this.vy = (Math.random() - 0.5) * 2;
+                this.vx = (Math.random() - 0.5) * 1.5;
+                this.vy = (Math.random() - 0.5) * 1.5;
             }
             update() {
                 this.x += this.vx; this.y += this.vy;
@@ -275,7 +275,7 @@
 
         function init() {
             resize();
-            for(let i=0; i<12; i++) particles.push(new Particle());
+            for(let i=0; i<10; i++) particles.push(new Particle());
             animate();
         }
 
