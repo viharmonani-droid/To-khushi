@@ -13,7 +13,6 @@
             --accent: #ee9ca7;
         }
 
-        /* Mobile Reset */
         * { 
             margin: 0; 
             padding: 0; 
@@ -30,7 +29,7 @@
             width: 100%;
         }
 
-        /* 1. Liquid Background (Optimized for Mobile GPU) */
+        /* 1. Liquid Crystal Background (Optimized GPU) */
         #canvas-bg {
             position: fixed;
             top: 0;
@@ -39,17 +38,18 @@
             height: 100%;
             z-index: 1;
             filter: blur(40px);
-            opacity: 0.7;
+            opacity: 0.8;
             pointer-events: none;
         }
 
-        /* 2. Vertical Pro Snap-Scroller */
+        /* 2. 3D Stack Scroller */
         #viewport {
             height: 100vh;
             overflow-y: scroll;
             scroll-snap-type: y mandatory;
             position: relative;
             z-index: 2;
+            perspective: 1200px;
             -webkit-overflow-scrolling: touch;
         }
 
@@ -61,59 +61,63 @@
             align-items: center;
             scroll-snap-align: start;
             padding: 20px;
+            perspective: 1000px;
         }
 
-        /* Mobile-First Glass UI */
+        /* Ultra-Level Glass UI */
         .glass-panel {
-            background: rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.35);
             backdrop-filter: blur(25px);
             -webkit-backdrop-filter: blur(25px);
             border: 1px solid rgba(255, 255, 255, 0.6);
-            border-radius: 45px;
+            border-radius: 40px;
             padding: 45px 25px;
             width: 100%;
-            max-width: 400px;
+            max-width: 380px;
             text-align: center;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.02);
+            box-shadow: 0 25px 50px rgba(238, 156, 167, 0.15);
+            
+            /* The Animation Peak */
             opacity: 0;
-            transform: translateY(30px) scale(0.95);
-            transition: all 0.8s cubic-bezier(0.2, 1, 0.2, 1);
+            transform: translateZ(-200px) translateY(100px) rotateX(20deg);
+            transition: all 1.2s cubic-bezier(0.15, 0.85, 0.35, 1);
         }
 
         section.active .glass-panel {
             opacity: 1;
-            transform: translateY(0) scale(1);
+            transform: translateZ(0) translateY(0) rotateX(0deg);
         }
 
         /* Typography */
         h1 {
             font-weight: 900;
-            font-size: 2.8rem;
-            line-height: 0.9;
+            font-size: 3rem;
+            line-height: 0.85;
             text-transform: uppercase;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             color: #fff;
-            text-shadow: 0 8px 20px rgba(238, 156, 167, 0.3);
+            letter-spacing: -1px;
+            text-shadow: 0 10px 30px rgba(238, 156, 167, 0.4);
         }
 
         .text-body {
-            font-size: 1rem;
-            line-height: 1.7;
+            font-size: 1.1rem;
+            line-height: 1.8;
             color: #444;
             font-weight: 300;
-            letter-spacing: 0.3px;
+            letter-spacing: 0.2px;
         }
 
-        /* THE SHAYARI (PEAK EMOTION) */
+        /* THE SHAYARI (ULTRA-LEVEL EMOTION) */
         .shayari-reveal {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.7rem;
+            font-size: 1.9rem;
             color: #222;
-            line-height: 1.4;
+            line-height: 1.35;
             font-style: italic;
             font-weight: 700;
-            margin: 20px 0;
-            background: linear-gradient(90deg, #222, #ee9ca7);
+            margin: 25px 0;
+            background: linear-gradient(135deg, #333, #ee9ca7);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -124,7 +128,7 @@
             left: 50%;
             transform: translateX(-50%);
             font-size: 0.6rem;
-            letter-spacing: 4px;
+            letter-spacing: 6px;
             text-transform: uppercase;
             color: #ee9ca7;
             z-index: 10;
@@ -132,98 +136,98 @@
         }
 
         @keyframes bounce {
-            0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.4; }
-            50% { transform: translateX(-50%) translateY(-8px); opacity: 1; }
+            0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.3; }
+            50% { transform: translateX(-50%) translateY(-10px); opacity: 1; }
         }
 
-        /* Touch Interaction Particles */
-        .spark {
+        /* Magic Haptic Particles */
+        .particle {
             position: fixed;
-            width: 6px;
-            height: 6px;
+            width: 10px;
+            height: 10px;
             background: #fff;
             border-radius: 50%;
             pointer-events: none;
             z-index: 1000;
-            box-shadow: 0 0 8px #fff;
+            box-shadow: 0 0 15px #fff;
         }
     </style>
 </head>
 <body>
 
     <canvas id="canvas-bg"></canvas>
-    <div class="scroll-hint">Swipe Up to Read ↓</div>
+    <div class="scroll-hint">Swipe Up ↓</div>
 
     <div id="viewport">
         <section class="active">
             <div class="glass-panel">
                 <h1>Khushi</h1>
-                <p class="text-body">Today’s afternoon felt like the world suddenly turned gray. The silence is heavy. You are both a friend and a sister to me—this distance feels completely wrong.</p>
+                <p class="text-body">This afternoon, the world felt like it lost its shine. The silence from you is heavy. Since you’re a friend and a sister together, this gap feels like a piece of me is missing.</p>
             </div>
         </section>
 
         <section>
             <div class="glass-panel">
                 <h1>The Void</h1>
-                <p class="text-body">I’ve replayed every word in my head. I realized my ego was loud and my heart was quiet. I hurt a person who deserves only my highest respect. I was wrong.</p>
+                <p class="text-body">I realized my ego was loud and my heart was quiet. I hurt someone who deserves only the best version of me. Seeing you stop talking is my hardest reality check.</p>
             </div>
         </section>
 
         <section>
             <div class="glass-panel">
                 <h1>Reality</h1>
-                <p class="text-body">You’re more than a friend; you’re family. Seeing you stop talking to me is the hardest reality check I’ve ever had. I value you more than my pride.</p>
+                <p class="text-body">You aren't just a friend; you’re family. My pride means nothing compared to our bond. I am deeply sorry for letting a moment of stupidity come between us.</p>
             </div>
         </section>
 
         <section>
             <div class="glass-panel">
-                <h1>The Reset</h1>
-                <p class="text-body">I can't undo this afternoon, but I can promise to protect our bond better. No more sharp words, no more tension. Let's start fresh tonight.</p>
+                <h1>Reset</h1>
+                <p class="text-body">I promise to be more mindful. I promise to protect this bond better. Let’s leave the afternoon behind and start fresh tonight. Please?</p>
             </div>
         </section>
 
         <section>
-            <div class="glass-panel" style="border: 1.5px solid #fff;">
+            <div class="glass-panel" style="border: 2px solid #fff;">
                 <div class="shayari-reveal">
                     "Khamoshi teri ab mujhse sahi nahi jaati,<br>
                     Ye doori dil ko ek pal sukoon nahi dilati...<br><br>
                     Galti meri thi, ehsaas bhi mujhe hai,<br>
                     Par tere bin ye 'Khushi' ab nazar nahi aati."
                 </div>
-                <p style="margin-top: 25px; font-weight: 900; letter-spacing: 3px; color: #ee9ca7; font-size: 0.9rem;">I AM TRULY SORRY. LET'S FIX THIS?</p>
+                <p style="margin-top: 30px; font-weight: 900; letter-spacing: 5px; color: #ee9ca7; font-size: 0.8rem;">I AM TRULY SORRY. LET'S TALK?</p>
             </div>
         </section>
     </div>
 
     <script>
-        // 1. Interactive Touch Sparkles (Impressive for Mobile)
+        // 1. Haptic Touch Particles
         document.addEventListener('touchstart', (e) => {
             const touch = e.touches[0];
-            for(let i=0; i<3; i++) {
-                createSpark(touch.clientX, touch.clientY);
+            for(let i=0; i<4; i++) {
+                createParticle(touch.clientX, touch.clientY);
             }
         });
 
-        function createSpark(x, y) {
-            const spark = document.createElement('div');
-            spark.className = 'spark';
-            spark.style.left = x + 'px';
-            spark.style.top = y + 'px';
-            document.body.appendChild(spark);
+        function createParticle(x, y) {
+            const p = document.createElement('div');
+            p.className = 'particle';
+            p.style.left = x + 'px';
+            p.style.top = y + 'px';
+            document.body.appendChild(p);
 
-            const destX = (Math.random() - 0.5) * 80;
-            const destY = (Math.random() - 0.5) * 80;
+            const destX = (Math.random() - 0.5) * 120;
+            const destY = (Math.random() - 0.5) * 120;
 
-            spark.animate([
+            p.animate([
                 { transform: 'translate(0,0) scale(1)', opacity: 1 },
                 { transform: `translate(${destX}px, ${destY}px) scale(0)`, opacity: 0 }
-            ], { duration: 700, easing: 'ease-out' });
+            ], { duration: 1000, easing: 'ease-out' });
 
-            setTimeout(() => spark.remove(), 700);
+            setTimeout(() => p.remove(), 1000);
         }
 
-        // 2. Active Section Observer
+        // 2. Active Slide Observer (For 3D Reveal)
         const sections = document.querySelectorAll('section');
         const viewport = document.getElementById('viewport');
         
@@ -238,7 +242,7 @@
             });
         });
 
-        // 3. Fluid Aura Background
+        // 3. Optimized Liquid Engine
         const canvas = document.getElementById('canvas-bg');
         const ctx = canvas.getContext('2d');
         let blobs = [];
@@ -252,10 +256,10 @@
             constructor() {
                 this.x = Math.random() * canvas.width;
                 this.y = Math.random() * canvas.height;
-                this.radius = Math.random() * 120 + 80;
+                this.radius = Math.random() * 180 + 120;
                 this.color = ['#ffdde1', '#ee9ca7', '#a1c4fd'][Math.floor(Math.random() * 3)];
-                this.vx = (Math.random() - 0.5) * 0.8;
-                this.vy = (Math.random() - 0.5) * 0.8;
+                this.vx = (Math.random() - 0.5) * 1.2;
+                this.vy = (Math.random() - 0.5) * 1.2;
             }
             update() {
                 this.x += this.vx; this.y += this.vy;
@@ -272,7 +276,7 @@
 
         function init() {
             resize();
-            for(let i=0; i<6; i++) blobs.push(new Blob());
+            for(let i=0; i<8; i++) blobs.push(new Blob());
             animate();
         }
 
