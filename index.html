@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>For Khushi</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:italic,wght@700&family=Outfit:wght@900&family=Syncopate:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Outfit:wght@900&family=Cormorant+Garamond:italic,wght@700&display=swap" rel="stylesheet">
     <style>
         :root {
             --aura-1: #ffffff;
@@ -27,10 +27,10 @@
             height: 100dvh;
             width: 100vw;
             overflow: hidden; 
-            position: fixed;
+            position: fixed; /* Prevents unwanted elastic scrolling */
         }
 
-        /* 1. Ultra-Fluid Canvas (Pro Graphics) */
+        /* 1. Ultra-Fluid Mesh Background (Pro Graphics) */
         #canvas-bg {
             position: fixed;
             top: 0;
@@ -60,63 +60,63 @@
             justify-content: center;
             align-items: center;
             scroll-snap-align: start;
-            padding: 15px;
+            padding: 10px; /* Maximize screen usage */
         }
 
-        /* 3. The "Elite" Glass Card - Uses Full Screen Height */
+        /* 3. The "Elite" Glass Card - Uses 90% Screen Height */
         .glass-panel {
-            background: rgba(255, 255, 255, 0.25);
-            backdrop-filter: blur(50px);
-            -webkit-backdrop-filter: blur(50px);
-            border: 2px solid rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(60px);
+            -webkit-backdrop-filter: blur(60px);
+            border: 2px solid rgba(255, 255, 255, 0.8);
             border-radius: 40px;
-            padding: 40px 20px;
+            padding: 40px 15px;
             width: 100%;
-            height: 90%; /* Forces the card to use almost the entire screen */
+            height: 92%; /* Takes up almost the whole screen */
             display: flex;
             flex-direction: column;
             justify-content: center;
             text-align: center;
-            box-shadow: 0 50px 100px rgba(238, 156, 167, 0.2);
+            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.05);
             
-            /* High-End Entry Animation */
+            /* Cinematic Reveal */
             opacity: 0;
-            transform: scale(0.9) translateY(40px);
-            transition: all 0.8s cubic-bezier(0.15, 0.85, 0.35, 1);
+            transform: scale(0.85) translateY(50px) rotateX(10deg);
+            transition: all 0.9s cubic-bezier(0.15, 0.85, 0.35, 1.1);
         }
 
         section.active .glass-panel {
             opacity: 1;
-            transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0) rotateX(0deg);
         }
 
-        /* 4. Massive Kinetic Typography */
+        /* 4. Massive Kinetic Typography (Pro Level) */
         h1 {
             font-family: 'Syncopate', sans-serif;
             font-weight: 700;
-            font-size: clamp(3.2rem, 14vw, 5rem); /* Extremely bold and large */
+            font-size: clamp(3.5rem, 16vw, 6rem); /* MASSIVE TEXT */
             line-height: 0.8;
             text-transform: uppercase;
-            margin-bottom: 35px;
+            margin-bottom: 30px;
             color: #fff;
-            letter-spacing: -3px;
+            letter-spacing: -4px;
             text-shadow: 0 10px 40px rgba(238, 156, 167, 0.6);
         }
 
         .text-body {
-            font-size: clamp(1.4rem, 6vw, 1.8rem); /* Large, easy-to-read text */
-            line-height: 1.4;
-            color: #1a1a1a;
+            font-size: clamp(1.5rem, 6.5vw, 2.2rem); /* Large, readable body */
+            line-height: 1.3;
+            color: #111;
             font-weight: 400;
             padding: 0 5px;
         }
 
-        /* THE SHAYARI (ULTRA-BOLD CENTERPIECE) */
+        /* THE CORE SHAYARI (ULTRA-BOLD CENTERPIECE) */
         .shayari-reveal {
             font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(2rem, 8vw, 3rem);
+            font-size: clamp(2.2rem, 9vw, 3.5rem);
             color: #000;
-            line-height: 1.25;
+            line-height: 1.2;
             font-style: italic;
             font-weight: 700;
             margin: 25px 0;
@@ -130,8 +130,8 @@
             bottom: 25px;
             left: 50%;
             transform: translateX(-50%);
-            font-size: 0.75rem;
-            letter-spacing: 6px;
+            font-size: 0.8rem;
+            letter-spacing: 8px;
             color: #ee9ca7;
             z-index: 10;
             text-transform: uppercase;
@@ -140,27 +140,27 @@
         }
 
         @keyframes bounce {
-            0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.4; }
+            0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.3; }
             50% { transform: translateX(-50%) translateY(-10px); opacity: 1; }
         }
 
-        /* Touch Interaction Particles */
-        .glow-particle {
+        /* Touch Interaction Orbs */
+        .glow-orb {
             position: fixed;
-            width: 12px;
-            height: 12px;
+            width: 15px;
+            height: 15px;
             background: #fff;
             border-radius: 50%;
             pointer-events: none;
             z-index: 1000;
-            box-shadow: 0 0 20px #fff, 0 0 40px var(--accent);
+            box-shadow: 0 0 25px #fff, 0 0 50px var(--accent);
         }
     </style>
 </head>
 <body>
 
     <canvas id="canvas-bg"></canvas>
-    <div class="hint">Swipe Up ↓</div>
+    <div class="hint">SWIPE UP ↓</div>
 
     <div id="viewport">
         <section class="active">
@@ -205,28 +205,28 @@
     </div>
 
     <script>
-        // 1. Interactive Mobile Touch Logic
+        // 1. Interactive Mobile Touch Graphics
         document.addEventListener('touchstart', (e) => {
             const touch = e.touches[0];
-            createParticle(touch.clientX, touch.clientY);
+            createOrb(touch.clientX, touch.clientY);
         });
 
-        function createParticle(x, y) {
+        function createOrb(x, y) {
             const el = document.createElement('div');
-            el.className = 'glow-particle';
+            el.className = 'glow-orb';
             el.style.left = x + 'px';
             el.style.top = y + 'px';
             document.body.appendChild(el);
 
             el.animate([
                 { transform: 'translate(0,0) scale(1)', opacity: 1 },
-                { transform: 'translate(0,-100px) scale(0)', opacity: 0 }
+                { transform: 'translate(0,-80px) scale(0)', opacity: 0 }
             ], { duration: 1000, easing: 'ease-out' });
 
             setTimeout(() => el.remove(), 1000);
         }
 
-        // 2. Active Slide Observer
+        // 2. Pro Scroll Snap Observer
         const sections = document.querySelectorAll('section');
         const viewport = document.getElementById('viewport');
         
@@ -241,7 +241,7 @@
             });
         });
 
-        // 3. Pro Liquid Background Engine
+        // 3. Ultra-Smooth Liquid Background
         const canvas = document.getElementById('canvas-bg');
         const ctx = canvas.getContext('2d');
         let particles = [];
